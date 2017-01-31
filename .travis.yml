@@ -1,0 +1,19 @@
+language: generic
+os: linux
+dist: trusty
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc
+      - g++
+      - git
+install:
+    - wget -O - https://raw.githubusercontent.com/Zefiros-Software/ZPM/master/script/install-zpm.sh | bash -s -u
+    # annoying pip fix
+    - export BOTO_CONFIG=/tmp/bogusvalue
+script:
+    - bash generate-makefile.sh
+    - cd edupack && make && cd ../
+    - bin/x86_64/bsp-test
