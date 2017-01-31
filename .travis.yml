@@ -9,6 +9,13 @@ addons:
       - gcc
       - g++
       - git
+      - liblapack-dev
+      - libblas-dev
+      - libatlas-base-dev
+      - libarpack2-dev
+      - libarpack++2-dev
+      - libblas-dev
+      - libatlas-base-dev
 install:
     - wget -O - https://raw.githubusercontent.com/Zefiros-Software/ZPM/master/script/install-zpm.sh | bash -s -- -u
     # annoying pip fix
