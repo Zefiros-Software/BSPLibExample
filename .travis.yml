@@ -10,7 +10,7 @@ addons:
       - g++
       - git
 install:
-    - wget -O - https://raw.githubusercontent.com/Zefiros-Software/ZPM/master/script/install-zpm.sh | bash -s -u
+    - wget -O - https://raw.githubusercontent.com/Zefiros-Software/ZPM/master/script/install-zpm.sh | bash -s -- -u
     # annoying pip fix
     - export BOTO_CONFIG=/tmp/bogusvalue
 script:
