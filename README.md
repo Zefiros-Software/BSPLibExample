@@ -64,3 +64,7 @@ For a debug build:
 cd bin/x86_64
 ./edupackd
 ```
+
+## Plotting the profile
+By default this code is profiling. So when it runs, it puts a ``plot.in`` in the working directory.
+This file is a python file and can be either modified in a text editor, or plotted by using ``python plot.in``.
