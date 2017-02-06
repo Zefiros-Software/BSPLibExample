@@ -4,8 +4,5 @@
             "name": "Zefiros-Software/BSPLib",
             "version": "^1.0.0"
         }
-    ],
-    "modules": [
-        "Zefiros-Software/Zefiros-Defaults"
     ]
 }

@@ -40,7 +40,9 @@ void bsplu_test()
     double **a, time0, time1;
 
     bsp_begin( M * N );
+
     BSPProf::PauseRecording();
+
     p = bsp_nprocs(); /* p=M*N */
     pid = bsp_pid();
 

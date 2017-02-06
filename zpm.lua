@@ -23,8 +23,6 @@
 -- @endcond
 --]]
 
-local zefiros = require( "Zefiros-Software/Zefiros-Defaults", "@head" )
-
 workspace "edupack"
 
     configurations {"Release", "Debug"}
@@ -67,4 +65,7 @@ workspace "edupack"
 		
 		includedirs "edupack/include/"
 		
-		files "edupack/**.cpp"
+		files {
+            "edupack/**.cpp",
+            "edupack/**.h"
+        }

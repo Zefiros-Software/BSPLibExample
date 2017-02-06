@@ -16,6 +16,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
+// This should be commented out to 
+// disable profiling (which will also increase the running speed)
+#define BSP_USE_PROFILER
+
+
+#include "plot/plotting.h"
 #include "bsp/bsp.h"
 
 #define SZDBL (sizeof(double))
