@@ -24,4 +24,4 @@ script:
     - bash generate-makefile.sh
     - cd edupack && make && cd ../
     - bin/x86_64/edupack
-    - cat bin/x86_64/edupack/plot.in
+    - cat bin/x86_64/plot.in
