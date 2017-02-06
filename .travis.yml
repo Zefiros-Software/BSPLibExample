@@ -17,10 +17,11 @@ addons:
       - libblas-dev
       - libatlas-base-dev
 install:
-    - wget -O - https://raw.githubusercontent.com/Zefiros-Software/ZPM/master/script/install-zpm.sh | bash -s -- -u
+    - wget -O - https://raw.githubusercontent.com/Zefiros-Software/ZPM/master/script/install-zpm.sh | bash -s
     # annoying pip fix
     - export BOTO_CONFIG=/tmp/bogusvalue
 script:
     - bash generate-makefile.sh
     - cd edupack && make && cd ../
-    - bin/x86_64/bsp-test
+    - bin/x86_64/edupack
+    - cat bin/x86_64/edupack/plot.in
