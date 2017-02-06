@@ -17,7 +17,7 @@ addons:
       - libblas-dev
       - libatlas-base-dev
 install:
-    - wget -O - https://raw.githubusercontent.com/Zefiros-Software/ZPM/master/script/install-zpm.sh | bash -s
+    - wget -O - https://raw.githubusercontent.com/Zefiros-Software/ZPM/master/script/install-zpm.sh | bash
     # annoying pip fix
     - export BOTO_CONFIG=/tmp/bogusvalue
 script:

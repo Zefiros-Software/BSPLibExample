@@ -54,13 +54,15 @@ void bsplu_test()
     if ( pid == 0 )
     {
         printf( "Please enter matrix size n:\n" );
-
+/*
 #ifdef _WIN32
         scanf_s( "%d", &n );
 #else
         scanf( "%d", &n );
 #endif
-
+*/
+        n = 16;
+        
         for ( q = 0; q < p; q++ )
         {
             bsp_put( q, &M, &M, 0, SZINT );
@@ -166,19 +168,24 @@ int main( int argc, char **argv )
 
     printf( "Please enter number of processor rows M:\n" );
 
+/*
 #ifdef _WIN32
     scanf_s( "%d", &M );
 #else
     scanf( "%d", &M );
 #endif
+*/
+    M = 2;
 
     printf( "Please enter number of processor columns N:\n" );
-
+/*
 #ifdef _WIN32
     scanf_s( "%d", &N );
 #else
     scanf( "%d", &N );
 #endif
+*/
+    N = 4;
 
     if ( M * N > bsp_nprocs() )
     {
