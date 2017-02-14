@@ -15,15 +15,15 @@ ifeq ($(config),release_x86_64)
   TARGETDIR = ../bin/x86_64
   TARGET = $(TARGETDIR)/edupack.exe
   OBJDIR = ../bin/obj/x86_64/Release
-  DEFINES += -DNDEBUG
-  INCLUDES += -Iinclude
+  DEFINES += -DNDEBUG -DPLOTLIB_NO_HEADER_ONLY -DPLOTLIB_USE_ZPM_ANACONDA
+  INCLUDES += -I../extern/Zefiros-Software/BSPLib-1.1.11/bsp/include -I../extern/Zefiros-Software/PlotLib-1.0.12/plot/include -Iinclude
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O3 -msse2
-  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O3 -msse2
+  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O3 -msse2 -std=c++11
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  LIBS +=
-  LDDEPS +=
+  LIBS += ../extern/@bin/BSPLib-1.1.11-CEB0.lib ../extern/@bin/PlotLib-1.0.12-2531.lib
+  LDDEPS += ../extern/@bin/BSPLib-1.1.11-CEB0.lib ../extern/@bin/PlotLib-1.0.12-2531.lib
   ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -s
   LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
@@ -42,15 +42,15 @@ ifeq ($(config),release_x86)
   TARGETDIR = ../bin/x86
   TARGET = $(TARGETDIR)/edupack.exe
   OBJDIR = ../bin/obj/x86/Release
-  DEFINES += -DNDEBUG
-  INCLUDES += -Iinclude
+  DEFINES += -DNDEBUG -DPLOTLIB_NO_HEADER_ONLY -DPLOTLIB_USE_ZPM_ANACONDA
+  INCLUDES += -I../extern/Zefiros-Software/BSPLib-1.1.11/bsp/include -I../extern/Zefiros-Software/PlotLib-1.0.12/plot/include -Iinclude
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m32 -O3 -msse2
-  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m32 -O3 -msse2
+  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m32 -O3 -msse2 -std=c++11
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  LIBS +=
-  LDDEPS +=
+  LIBS += ../extern/@bin/BSPLib-1.1.11-CEB0.lib ../extern/@bin/PlotLib-1.0.12-2531.lib
+  LDDEPS += ../extern/@bin/BSPLib-1.1.11-CEB0.lib ../extern/@bin/PlotLib-1.0.12-2531.lib
   ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib32 -m32 -s
   LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
@@ -69,15 +69,15 @@ ifeq ($(config),debug_x86_64)
   TARGETDIR = ../bin/x86_64
   TARGET = $(TARGETDIR)/edupackd.exe
   OBJDIR = ../bin/obj/x86_64/Debug
-  DEFINES += -DDEBUG
-  INCLUDES += -Iinclude
+  DEFINES += -DDEBUG -DPLOTLIB_NO_HEADER_ONLY -DPLOTLIB_USE_ZPM_ANACONDA
+  INCLUDES += -I../extern/Zefiros-Software/BSPLib-1.1.11/bsp/include -I../extern/Zefiros-Software/PlotLib-1.0.12/plot/include -Iinclude
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O0 -g -msse2
-  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O0 -g -msse2
+  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O0 -g -msse2 -std=c++11
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  LIBS +=
-  LDDEPS +=
+  LIBS += ../extern/@bin/BSPLib-1.1.11-CEB0d.lib ../extern/@bin/PlotLib-1.0.12-2531d.lib
+  LDDEPS += ../extern/@bin/BSPLib-1.1.11-CEB0d.lib ../extern/@bin/PlotLib-1.0.12-2531d.lib
   ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64
   LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
@@ -96,15 +96,15 @@ ifeq ($(config),debug_x86)
   TARGETDIR = ../bin/x86
   TARGET = $(TARGETDIR)/edupackd.exe
   OBJDIR = ../bin/obj/x86/Debug
-  DEFINES += -DDEBUG
-  INCLUDES += -Iinclude
+  DEFINES += -DDEBUG -DPLOTLIB_NO_HEADER_ONLY -DPLOTLIB_USE_ZPM_ANACONDA
+  INCLUDES += -I../extern/Zefiros-Software/BSPLib-1.1.11/bsp/include -I../extern/Zefiros-Software/PlotLib-1.0.12/plot/include -Iinclude
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m32 -O0 -g -msse2
-  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m32 -O0 -g -msse2
+  ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m32 -O0 -g -msse2 -std=c++11
   ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  LIBS +=
-  LDDEPS +=
+  LIBS += ../extern/@bin/BSPLib-1.1.11-CEB0d.lib ../extern/@bin/PlotLib-1.0.12-2531d.lib
+  LDDEPS += ../extern/@bin/BSPLib-1.1.11-CEB0d.lib ../extern/@bin/PlotLib-1.0.12-2531d.lib
   ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib32 -m32
   LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
   define PREBUILDCMDS
@@ -119,6 +119,7 @@ all: $(TARGETDIR) $(OBJDIR) prebuild prelink $(TARGET)
 endif
 
 OBJECTS := \
+	$(OBJDIR)/bspedupack.o \
 	$(OBJDIR)/bsplu.o \
 	$(OBJDIR)/bsplu_test.o \
 
@@ -178,6 +179,9 @@ $(GCH): $(PCH)
 	$(SILENT) $(CXX) -x c++-header $(ALL_CXXFLAGS) -o "$@" -MF "$(@:%.gch=%.d)" -c "$<"
 endif
 
+$(OBJDIR)/bspedupack.o: bspedupack.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/bsplu.o: bsplu.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
