@@ -19,7 +19,7 @@
 
 // This should be commented out to 
 // disable profiling (which will also increase the running speed)
-#define BSP_USE_PROFILER
+// #define BSP_USE_PROFILER
 
 
 // #include "plot/plotting.h"
