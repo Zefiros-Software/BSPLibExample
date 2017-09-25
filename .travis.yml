@@ -24,4 +24,5 @@ script:
     - bash generate-makefile.sh
     - cd edupack && make && cd ../
     - bin/x86_64/edupack
-    - cat plot.in
+    # Profiler disabled for now
+    #- cat plot.in
