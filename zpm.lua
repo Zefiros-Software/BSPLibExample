@@ -58,9 +58,8 @@ workspace "edupack"
 
     project( "edupack" )
 				
-		kind "ConsoleApp"
-		flags "WinMain"
-
+        kind "ConsoleApp"
+        
         zpm.uses "Zefiros-Software/BSPLib"
 		
 		includedirs "edupack/include/"
