@@ -17,7 +17,7 @@ addons:
       - libblas-dev
       - libatlas-base-dev
 install:
-    - source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/features/refactor/script/install-zpm.sh)"
+    - source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/master/script/install-zpm.sh)"
 script:
     - bash generate-makefile.sh
     - cd edupack && make && cd ../
